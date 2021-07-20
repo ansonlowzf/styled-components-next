@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
-import Sidebar01 from "../Sidebar01";
+import Sidebar02 from "../Sidebar02";
 import {
   MobileIcon,
   Nav,
@@ -28,7 +28,7 @@ const Navbar01 = () => {
         <MobileIcon onClick={toggle}>
           <FaBars />
         </MobileIcon>
-        <Sidebar01 isOpen={isOpen} toggle={toggle} />
+        <Sidebar02 isOpen={isOpen} toggle={toggle} />
       </NavContainer>
     </Nav>
   );

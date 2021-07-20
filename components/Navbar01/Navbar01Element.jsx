@@ -3,7 +3,7 @@ import { FaHome } from "react-icons/fa";
 
 export const Nav = styled.div`
   background-color: ${(props) => props.theme.bgColors.primary};
-  height: 80px;
+  height: 64px;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -19,24 +19,24 @@ export const NavContainer = styled.div`
   padding-right: 50px;
   padding-left: 50px;
 
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: ${(props) => props.theme.breakpoints.md}) {
     padding-right: 30px;
     padding-left: 30px;
   }
 `;
 
 export const NavLogo = styled.a`
-  height: 80px;
+  height: 64px;
   color: hsl(0, 0%, 100%);
   display: flex;
   justify-self: flex-start;
   align-items: center;
   cursor: pointer;
-  /* text-decoration: none; */
+  text-decoration: none;
 `;
 
 export const NavIcon = styled(FaHome)`
-  font-size: 3rem;
+  font-size: 2rem;
 `;
 
 export const MobileIcon = styled.div`
