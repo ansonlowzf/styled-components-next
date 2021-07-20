@@ -1,8 +1,13 @@
 export const theme = {
   colors: {
-    primary: `#0070f3`,
+    primary: "hsl(212, 100%, 48%)",
   },
   bgColors: {
-    primary: `#212529`,
+    primary: "hsl(210, 11%, 15%)",
+  },
+  breakpoints: {
+    sm: "600px",
+    md: "960px",
+    lg: "1280px",
   },
 };
