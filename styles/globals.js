@@ -89,6 +89,10 @@ export const GlobalStyle = createGlobalStyle`
     font: inherit;
     vertical-align: baseline;
   }
+  
+  body {
+    font-family: Roboto, 'Open Sans', sans-serif;
+  }
 
   :focus {
     outline: 0;
