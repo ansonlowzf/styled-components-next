@@ -68,6 +68,7 @@ export const MainNavItems = styled.a`
   cursor: pointer;
   padding-right: 1rem;
   padding-left: 1rem;
+  font-weight: bold;
 
   &:hover {
     color: #e31837;
