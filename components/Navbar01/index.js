@@ -8,7 +8,10 @@ import {
   NavContainer,
   NavIcon,
   NavLogo,
+  MainNavContainer,
+  MainNavItems,
 } from "./Navbar01Element";
+import { MainMenu } from "../../const/navlinks";
 
 const Navbar01 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,6 +31,13 @@ const Navbar01 = () => {
         <MobileIcon onClick={toggle}>
           <FaBars />
         </MobileIcon>
+        <MainNavContainer>
+          {MainMenu.map(({ id, name, path }) => (
+            <Link href={path} passHref key={id}>
+              <MainNavItems>{name}</MainNavItems>
+            </Link>
+          ))}
+        </MainNavContainer>
         <Sidebar02 isOpen={isOpen} toggle={toggle} />
       </NavContainer>
     </Nav>

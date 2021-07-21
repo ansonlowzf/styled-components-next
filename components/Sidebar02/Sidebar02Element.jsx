@@ -12,6 +12,9 @@ export const SidebarContainer = styled.aside`
   overflow-x: hidden;
   padding-top: 60px;
   transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Icon = styled.div`
@@ -33,22 +36,17 @@ export const SidebarMenu = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, 80px);
   text-align: center;
-
-  @media screen and (max-width: ${(props) => props.theme.breakpoints.sm}) {
-    grid-template-rows: repeat(5, 60px);
-  }
 `;
 
 export const SidebarLink = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
+  color: hsl(0, 0%, 100%);
   font-size: 1.5rem;
   text-decoration: none;
   text-transform: uppercase;
-  list-style: none;
   transition: 0.2s ease-in-out;
-  color: hsl(0, 0%, 100%);
   cursor: pointer;
   &:hover {
     color: #e31837;

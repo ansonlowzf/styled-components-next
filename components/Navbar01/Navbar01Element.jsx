@@ -49,3 +49,28 @@ export const MobileIcon = styled.div`
     cursor: pointer;
   }
 `;
+
+export const MainNavContainer = styled.nav`
+  display: flex;
+  align-items: center;
+  height: 64px;
+
+  @media screen and (max-width: ${(props) => props.theme.breakpoints.md}) {
+    display: none;
+  }
+`;
+
+export const MainNavItems = styled.a`
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  padding-right: 1rem;
+  padding-left: 1rem;
+
+  &:hover {
+    color: #e31837;
+    transition: 0.2s ease-in-out;
+  }
+`;
