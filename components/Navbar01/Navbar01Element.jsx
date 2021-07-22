@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import { FaHome } from "react-icons/fa";
+import styled from "styled-components";
 
 export const Nav = styled.div`
   background-color: ${(props) => props.theme.bgColors.primary};
@@ -71,7 +71,7 @@ export const MainNavItems = styled.a`
   font-weight: bold;
 
   &:hover {
-    color: #e31837;
+    color: ${(props) => props.theme.colors.primary};
     transition: 0.2s ease-in-out;
   }
 `;

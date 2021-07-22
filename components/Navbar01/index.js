@@ -1,17 +1,18 @@
+import NextLink from "../NextLink";
 import Link from "next/link";
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
+import { MainMenu } from "../../const/navlinks";
 import Sidebar02 from "../Sidebar02";
 import {
+  MainNavContainer,
   MobileIcon,
   Nav,
   NavContainer,
   NavIcon,
   NavLogo,
-  MainNavContainer,
   MainNavItems,
 } from "./Navbar01Element";
-import { MainMenu } from "../../const/navlinks";
 
 const Navbar01 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,9 +34,9 @@ const Navbar01 = () => {
         </MobileIcon>
         <MainNavContainer>
           {MainMenu.map(({ id, name, path }) => (
-            <Link href={path} passHref key={id}>
+            <NextLink activeClassName="active" href={path} key={id}>
               <MainNavItems>{name}</MainNavItems>
-            </Link>
+            </NextLink>
           ))}
         </MainNavContainer>
         <Sidebar02 isOpen={isOpen} toggle={toggle} />

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Heading1, Heading2, Heading3 } from "../styles/typography";
+import NextLink from "../components/NextLink";
 
 const Title = styled.h1`
   font-size: 50px;

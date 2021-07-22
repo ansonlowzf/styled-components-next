@@ -2,8 +2,6 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "../styles/globals";
 import { theme } from "../styles/theme";
 
-import Hero from "../components/Hero";
-
 import Navbar01 from "../components/Navbar01";
 
 function MyApp({ Component, pageProps }) {

@@ -328,6 +328,11 @@ export const GlobalStyle = createGlobalStyle`
     color: #000;
     padding: 0.2em 0;
   }
+
+  .active {
+  opacity: 0.7;
+}
+
 `;
 
 export const Button = styled.button`
