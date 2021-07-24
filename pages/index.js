@@ -1,19 +1,15 @@
-import styled from "styled-components";
-import { Heading1, Heading2, Heading3 } from "../styles/typography";
-import NextLink from "../components/NextLink";
-
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`;
+import Hero from "../components/Hero";
+import { HeroButton } from "../components/Hero/HeroElement";
+import { Heading1, Heading2, Heading3 } from "../components/Typography";
 
 export default function Home() {
   return (
     <>
-      <Title>My page</Title>
-      <Heading1>This is a title</Heading1>
-      <Heading2>This is a title</Heading2>
+      <Hero imgSrc="/pizza.jpg" imgAlt="pizza" />
+      <Heading1 primary>This is a title</Heading1>
+      <Heading2 primary>This is a title</Heading2>
       <Heading3>This is a title</Heading3>
+      <HeroButton>Check Out</HeroButton>
     </>
   );
 }

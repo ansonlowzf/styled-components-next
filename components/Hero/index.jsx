@@ -1,35 +1,24 @@
-import { useState } from "react";
-import Navbar from "../Navbar";
 import {
   HeroContainer,
+  HeroOverlay,
+  HeroTitle,
+  HeroSubtitle,
   HeroContent,
-  HeroItems,
-  HeroH1,
-  HeroP,
-  HeroBtn,
+  HeroButton,
 } from "./HeroElement";
-import Sidebar from "../Sidebar";
-// import ImgBg from "../../public/pizza.jpg";
-// import Image from "next/image";
+import Image from "next/image";
 
-const Hero = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
-
+const Hero = ({ imgSrc, imgAlt }) => {
   return (
     <HeroContainer>
-      <Navbar toggle={toggle} />
-      <Sidebar isOpen={isOpen} toggle={toggle} />
-      <HeroContent>
-        <HeroItems>
-          <HeroH1>Greatest Pizza Ever</HeroH1>
-          <HeroP>Ready in 60 seconds</HeroP>
-          <HeroBtn>Place Order</HeroBtn>
-        </HeroItems>
-      </HeroContent>
+      <Image src={imgSrc} alt={imgAlt} layout="fill" objectFit="cover" />
+      <HeroOverlay>
+        <HeroContent>
+          <HeroTitle>This is Heading1</HeroTitle>
+          <HeroSubtitle as="p">This is Subtitle</HeroSubtitle>
+          <HeroButton>Check Out</HeroButton>
+        </HeroContent>
+      </HeroOverlay>
     </HeroContainer>
   );
 };

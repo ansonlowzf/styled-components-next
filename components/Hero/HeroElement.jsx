@@ -1,61 +1,51 @@
 import styled from "styled-components";
+import { Heading1, Heading2 } from "../Typography";
+import { ButtonT1 } from "../../styles/globals";
 
 export const HeroContainer = styled.section`
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
-    url("/pizza.jpg");
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
+  position: relative;
+  height: calc(100vh - 64px);
+  width: 100vw;
+  overflow: hidden;
+  z-index: -99;
+`;
+
+export const HeroOverlay = styled.div`
+  position: absolute;
+  inset: 0;
+  background-color: hsla(0, 0%, 0%, 0.3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const HeroContent = styled.div`
-  height: calc(100vh - 80px);
-  max-height: 100%;
-  padding: 0rem calc((100vw - 1300px) / 2);
+  width: min(70%, ${(props) => props.theme.breakpoints.lg});
+
+  @media screen and (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    text-align: center;
+  }
 `;
 
-export const HeroItems = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100vh;
-  max-height: 100%;
-  padding: 0 2rem;
-  width: 650px;
-  color: #fff;
-  text-transform: uppercase;
-  line-height: 1;
+export const HeroTitle = styled(Heading1)`
+  margin-bottom: 2rem;
+  font-weight: bolder;
+
+  @media screen and (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    text-align: center;
+  }
+`;
+
+export const HeroSubtitle = styled(Heading2)`
+  margin-bottom: 2rem;
   font-weight: bold;
 
-  @media screen and (max-width: 650px) {
-    width: 100%;
+  @media screen and (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    text-align: center;
   }
 `;
 
-export const HeroH1 = styled.h1`
-  font-size: clamp(2.5rem, 10vw, 5rem);
-  margin-bottom: 1rem;
-  box-shadow: 3px 5px #e9ba23;
-  letter-spacing: 3px;
-`;
-
-export const HeroP = styled.p`
-  font-size: clamp(2rem, 2.5vw, 3rem);
-  margin-bottom: 2rem;
-`;
-
-export const HeroBtn = styled.button`
-  font-size: 1.4rem;
-  padding: 1rem 4rem;
-  border: none;
-  background: #e31837;
-  color: #fff;
-  transition: 0.2s ease-out;
-  &:hover {
-    background: #ffc500;
-    transition: 0.2s ease-out;
-    cursor: pointer;
-    color: #000;
-  }
+export const HeroButton = styled(ButtonT1)`
+  font-size: 2rem;
 `;
