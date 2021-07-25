@@ -1,17 +1,17 @@
 import {
   HeroContainer,
+  HeroImage,
   HeroOverlay,
   HeroTitle,
   HeroSubtitle,
   HeroContent,
   HeroButton,
 } from "./HeroElement";
-import Image from "next/image";
 
 const Hero = ({ imgSrc, imgAlt }) => {
   return (
     <HeroContainer>
-      <Image src={imgSrc} alt={imgAlt} layout="fill" objectFit="cover" />
+      <HeroImage src={imgSrc} alt={imgAlt} layout="fill" objectFit="cover" />
       <HeroOverlay>
         <HeroContent>
           <HeroTitle>This is Heading1</HeroTitle>
