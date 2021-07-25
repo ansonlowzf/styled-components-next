@@ -66,9 +66,9 @@ export const MainNavItems = styled.a`
   text-transform: uppercase;
   transition: 0.2s ease-in-out;
   cursor: pointer;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding: 0rem 1rem;
   font-weight: bold;
+  opacity: 0.7;
 
   &:hover {
     color: ${(props) => props.theme.colors.primary};

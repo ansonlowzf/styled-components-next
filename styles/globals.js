@@ -330,7 +330,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .active {
-  opacity: 0.7;
+  opacity: 1;
 }
 
 `;
@@ -356,22 +356,5 @@ export const Button = styled.button`
 
   @media screen and (max-width: 960px) {
     width: 100%;
-  }
-`;
-
-export const ButtonT1 = styled.button`
-  font-size: 1.4rem;
-  padding: 1rem 2.75rem;
-  border: none;
-  background: #e31837;
-  color: #fff;
-  transition: 0.2s ease-out;
-  cursor: pointer;
-
-  &:hover {
-    background: #ffc500;
-    transition: 0.2s ease-out;
-    cursor: pointer;
-    color: #000;
   }
 `;
