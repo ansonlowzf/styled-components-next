@@ -12,9 +12,9 @@ import {
   NavIcon,
   NavLogo,
   MainNavItems,
-} from "./Navbar01Element";
+} from "./HeaderElement";
 
-const Navbar01 = () => {
+const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
@@ -45,4 +45,4 @@ const Navbar01 = () => {
   );
 };
 
-export default Navbar01;
+export default Header;

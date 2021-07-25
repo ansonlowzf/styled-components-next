@@ -66,7 +66,7 @@ export const MainNavItems = styled.a`
   text-transform: uppercase;
   transition: 0.2s ease-in-out;
   cursor: pointer;
-  padding: 0rem 1rem;
+  padding: 0 1rem;
   font-weight: bold;
   opacity: 0.7;
 
