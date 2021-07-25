@@ -2,14 +2,14 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "../styles/globals";
 import { theme } from "../styles/theme";
 
-import Navbar from "../components/Navbar";
+import Header from "../components/Header";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
-        <Navbar />
+        <Header />
         <Component {...pageProps} />
       </ThemeProvider>
     </>
