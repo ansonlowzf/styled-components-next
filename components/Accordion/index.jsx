@@ -35,7 +35,9 @@ const Accordion = ({ Data }) => {
                 <Dropdown>
                   <p>{item.answer}</p>
                 </Dropdown>
-              ) : null}
+              ) : (
+                ""
+              )}
             </>
           ))}
         </Container>
