@@ -1,17 +1,16 @@
-import NextLink from "../NextLink";
-import Link from "next/link";
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { MainMenu } from "../../const/navlinks";
+import NextLink from "../NextLink";
 import Sidebar02 from "../Sidebar02";
 import {
-  MainNavContainer,
+  MenuContainer,
+  MenuItems,
   MobileIcon,
   Nav,
   NavContainer,
   NavIcon,
   NavLogo,
-  MainNavItems,
 } from "./HeaderElement";
 
 const Header = () => {
@@ -24,21 +23,21 @@ const Header = () => {
   return (
     <Nav>
       <NavContainer>
-        <Link href="/" passHref>
+        <NextLink href="/">
           <NavLogo>
             <NavIcon />
           </NavLogo>
-        </Link>
+        </NextLink>
         <MobileIcon onClick={toggle}>
           <FaBars />
         </MobileIcon>
-        <MainNavContainer>
+        <MenuContainer>
           {MainMenu.map(({ id, name, path }) => (
             <NextLink activeClassName="active" href={path} key={id}>
-              <MainNavItems>{name}</MainNavItems>
+              <MenuItems>{name}</MenuItems>
             </NextLink>
           ))}
-        </MainNavContainer>
+        </MenuContainer>
         <Sidebar02 isOpen={isOpen} toggle={toggle} />
       </NavContainer>
     </Nav>
